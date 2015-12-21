@@ -1,0 +1,51 @@
+There is instruction how to port SunDog engine to another OS.
+
+[1]
+Add info about your specific DEFINEs in the core/core.h
+
+[2]
+Add function main() for your device in the main/code/main.cpp
+
+[3]
+Make changes in the filesystem/code/v3nus_fs.cpp (.h). Device dependent functions:
+get_disks
+get_current_disk
+get_current_dir
+file_size
+find_first
+find_next
+find_close
+
+[4]
+Make changes in the sound/*.cpp (*.h). Device dependent functions:
+sound_stream_init
+sound_stream_play
+sound_stream_stop
+sound_stream_close
+
+[5]
+Make changes in the time/code/timemanager.cpp (.h). Device dependent functions:
+time_hours
+time_minutes
+time_seconds
+time_ticks_per_second
+time_ticks
+
+[6]
+Create file wm_YOURDEVICENAME.h with functions:
+device_start
+device_end
+device_event_handler
+device_draw_line
+device_draw_box
+device_draw_bitmap
+device_screen_lock
+device_screen_unlock
+device_redraw_framebuffer
+Include this file in the wmanager.cpp
+
+[7]
+Make changes in a following files, if it's necessary:
+core/code/debug.cpp (.h)
+memory/code/memory.cpp (.h)
+utils/code/utils.cpp (.h) 

@@ -1,0 +1,7 @@
+1) Edit Makefile:
+   for Linux: uncomment necessary lines for OpenGL or X11 libs;
+   for PalmOS: SDK must point to the PalmOS sdk-5 folder (example: SDK = /sdk-5/);
+   SUNDOG must point to the sundog_engine folder;
+   change SUNDOG_DEFINES for your device.
+2) Type "make palm", "make wince" or "make linux"
+3) Done.

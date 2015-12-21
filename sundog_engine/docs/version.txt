@@ -1,0 +1,20 @@
+SunDog engine. v1.5 (xx xxx xxxx)
+
+v1.5 (xx xxx xxxx):
+* .
+v1.4 (26 oct 2008):
+* ALSA support in Linux;
+* some another changes...
+v1.3 (14 aug 2008):
+* fixed bugs in v3nus_fs;
+* added sundog_mutex_XXX() functions for wokring with posix mutexes;
+* revised window manager.
+v1.2 (22 mar 2008):
+* added functions device_screen_lock/unlock();
+* added SDL support in Linux;
+* added DIRECTDRAW mode for PalmOS;
+* bugs fixed.
+v1.1 (17 feb 2008):
+* many bugs fixed.
+v1.0 (01 feb 2008):
+* first official release.

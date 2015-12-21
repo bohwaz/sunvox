@@ -1,0 +1,41 @@
+Using the SunDog engine
+
+[1]
+Include all SunDog files to your project.
+
+[2]
+Check all possible defines in the core/core.h
+
+[3]
+Create file with your own code like this:
+#include "main/user_code.h"
+char *user_window_name = "YOUR WINDOW NAME"
+char *user_config_file_name = "config.ini";
+int user_window_xsize = 320;
+int user_window_ysize = 180;
+int user_window_flags = 0;
+void render_piece_of_sound( signed short *buffer, int buffer_size, void *user_data )
+{
+}
+void user_init( window_manager *wm )
+{
+}
+int user_event_handler( event *evt, window_manager *wm )
+{
+    int retval = 0;
+    if( evt->event_type == EVT_BUTTONDOWN )
+    {
+	if( evt->button == KEY_ESCAPE ) 
+	{
+	    wm->exit_request = 1;
+            retval = 1;
+	}
+    }
+    return retval;
+}
+void user_screen_redraw( window_manager *wm )
+{
+}
+void user_close( window_manager *wm )
+{
+}
